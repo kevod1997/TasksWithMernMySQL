@@ -9,9 +9,10 @@ import { TaskContextProvider } from "./context/TaskProvider";
 
 function App() {
   return (
-    <>
-     <TaskContextProvider>
+    <div className="bg-zinc-900 h-screen">
      <NavBar />
+     <div className="container mx-auto py-4 ">
+     <TaskContextProvider>
       <Routes>
         <Route path="/" element={<TasksPage />} />
         <Route path="/new" element={<TasksForm />} />
@@ -19,7 +20,8 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
      </TaskContextProvider>
-    </>
+     </div>
+    </div>
   );
 }
 
